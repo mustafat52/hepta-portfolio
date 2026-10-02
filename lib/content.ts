@@ -7,12 +7,12 @@ export const C = {
   address: "Street address, City, State",
   heroImages: ["/hero/h1.jpg", "/hero/h2.jpg", "/hero/h3.jpg"],
   services: [
-    { name: "Interior Design", text: "Space planning, 3D visuals and detailed drawings for every room." },
-    { name: "Turnkey Interiors", text: "Design, build, furnish and hand over. You get the keys, we do the rest." },
-    { name: "Construction", text: "New builds, extensions and structural work by our own site crew." },
-    { name: "Renovation", text: "Kitchens, bathrooms or whole homes, planned to keep disruption low." },
-    { name: "Custom Furniture", text: "Wardrobes, kitchens and wall units made to your measurements." },
-    { name: "Project Management", text: "Already have a design? We run the site, vendors and schedule." },
+    { name: "Interior Design", image: "/services/interior-design.jpg", text: "Space planning, 3D visuals and detailed drawings for every room." },
+    { name: "Turnkey Interiors", image: "/services/turnkey-interiors.jpg", text: "Design, build, furnish and hand over. You get the keys, we do the rest." },
+    { name: "Construction", image: "/services/construction.jpg", text: "New builds, extensions and structural work by our own site crew." },
+    { name: "Renovation", image: "/services/renovation.jpg", text: "Kitchens, bathrooms or whole homes, planned to keep disruption low." },
+    { name: "Custom Furniture", image: "/services/custom-furniture.jpg", text: "Wardrobes, kitchens and wall units made to your measurements." },
+    { name: "Project Management", image: "/services/project-management.jpg", text: "Already have a design? We run the site, vendors and schedule." },
   ],
   process: [
     ["Consultation", "Site visit, measurements, needs and budget."],

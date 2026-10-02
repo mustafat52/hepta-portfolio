@@ -40,7 +40,7 @@ export function Services() {
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {C.services.map((s, i) => (
           <HoverTransition key={s.name} effect="wipe" direction={i % 2 ? "left" : "right"} label={s.name} className="h-72 rounded-xl"
-            defaultComponent={<div className="flex h-full flex-col justify-between bg-[#17234d] p-6 text-[#f2ead8]"><span className={`${D} text-sm text-[#e6c97a]`}>0{i + 1}</span><h3 className={`${D} text-3xl font-semibold tracking-tight`}>{s.name}</h3></div>}
+            defaultComponent={<div className="relative flex h-full flex-col justify-between overflow-hidden bg-[#17234d] p-6 text-[#f2ead8]"><img src={s.image} alt={s.name} className="absolute inset-0 h-full w-full object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-[#0b1330]/90 via-[#0b1330]/25 to-[#0b1330]/30" /><span className={`${D} relative text-sm font-semibold text-[#e6c97a]`}>0{i + 1}</span><h3 className={`${D} relative text-3xl font-semibold tracking-tight`}>{s.name}</h3></div>}
             hoverComponent={<div className="flex h-full flex-col justify-end bg-[#d6b25e] p-6 text-[#0b1330]"><h3 className={`${D} mb-3 text-2xl font-semibold`}>{s.name}</h3><p>{s.text}</p></div>} />
         ))}
       </div>
