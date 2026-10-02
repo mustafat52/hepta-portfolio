@@ -14,7 +14,7 @@ export function Hero() {
     <section id="top" className="relative h-[100svh] min-h-[640px] overflow-hidden bg-[#0b1330]">
       <RippleTransition images={C.heroImages} borderRadius={0} autoPlay autoPlayInterval={9000} background="#0b1330" label="Hepta project photos" className="absolute inset-0 min-h-0" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/30" />
-      <div className="pointer-events-none relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-5 pb-20 text-white">
+      <div className="pointer-events-none relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-center px-5 pb-8 pt-16 text-white">
         <p className={`${D} mb-5 text-sm uppercase tracking-[0.3em] text-[#e6c97a]`}>Constructions &amp; Interiors</p>
         <KineticTextReveal text="We build and design the spaces you live and work in." splitBy="words" stagger={0.09} delay={0.3} className={`${D} max-w-4xl text-5xl font-semibold leading-[1.02] tracking-tight md:text-7xl`} />
         <p className="mt-8 text-sm text-white/60">Tap the image to change the view</p>

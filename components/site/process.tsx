@@ -25,7 +25,7 @@ export function Process() {
   const [i, setI] = useState(0);
   const s = PROCESS[i];
   return (
-    <section id="process" className="mx-auto max-w-6xl scroll-mt-16 px-5 pb-28 pt-20">
+    <section id="process" className="relative z-10 mx-auto max-w-6xl scroll-mt-16 px-5 pb-28 pt-20">
       <h2 className={`${D} text-4xl font-semibold tracking-tight md:text-6xl`}>How a project runs</h2>
       <p className="mt-3 max-w-2xl text-[#f2ead8]/70">
         Six stages from first visit to handover. Click a stage to see what happens, what you receive and what we need from you.
