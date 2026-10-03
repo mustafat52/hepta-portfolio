@@ -30,7 +30,10 @@ export function Footer() {
     <footer className="bg-[#070c20] px-5 py-10 text-sm text-white/70">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4">
         <Wordmark light />
-        <p>{C.phone} &middot; {C.email}</p>
+        <div className="space-y-1">
+          <p><a href={`tel:+${C.whatsapp}`} className="hover:text-white">{C.phone}</a> &middot; <a href={`mailto:${C.email}`} className="hover:text-white">{C.email}</a></p>
+          {C.addresses.map((a) => <p key={a.label}><b className="text-white/90">{a.label}:</b> {a.text}</p>)}
+        </div>
         <p>&copy; 2026 Hepta Constructions &amp; Interiors</p>
       </div>
     </footer>

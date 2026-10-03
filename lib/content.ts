@@ -11,8 +11,12 @@ export type Project = {
 export const C = {
   phone: "+91 98855 18959",
   whatsapp: "919885518959",
-  email: "hello@heptaconstructions.com",
-  address: "Street address, City, State",
+  email: "Heptaconstruction64@gmail.com",
+  address: "Plot No. 57, Street No. 3, Alhasanath Colony, Tolichowki, Hyderabad",
+  addresses: [
+    { label: "Main branch", text: "Plot No. 57, Street No. 3, Alhasanath Colony, Tolichowki, Hyderabad" },
+    { label: "Office", text: "5-167/1/A/1, Ganesh Nagar, Bachupally, opposite Sri Chaitanya IIT Academy, Hyderabad" },
+  ],
   heroImages: ["/hero/h1.jpg", "/hero/h2.jpg", "/hero/h3.jpg"],
   services: [
     { name: "Interior Design", image: "/services/interior-design.jpg", text: "Space planning, 3D visuals and detailed drawings for every room." },

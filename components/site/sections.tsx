@@ -104,7 +104,16 @@ export function Contact() {
           <div>
             <h2 className={`${D} text-5xl font-semibold leading-none tracking-tight md:text-7xl`}>Let&apos;s plan your space</h2>
             <p className="mt-6 max-w-md text-white/80">Tell us about the project. We reply within one working day.</p>
-            <p className="mt-8">{C.phone}<br />{C.email}<br />{C.address}</p>
+            <div className="mt-8 space-y-5">
+              <p><a href={`tel:+${C.whatsapp}`} className="hover:text-[#e6c97a]">{C.phone}</a><br /><a href={`mailto:${C.email}`} className="hover:text-[#e6c97a]">{C.email}</a></p>
+              {C.addresses.map((a) => (
+                <div key={a.label}>
+                  <b className={`${D} text-sm uppercase tracking-widest text-[#e6c97a]`}>{a.label}</b>
+                  <p>{a.text}</p>
+                  <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.text)}`} target="_blank" rel="noopener noreferrer" className="text-sm underline underline-offset-4 hover:text-[#e6c97a]">View on map</a>
+                </div>
+              ))}
+            </div>
           </div>
           <form onSubmit={send} className={`${D} grid gap-4 self-center`}>
             <input name="name" required placeholder="Your name" className={field} />
