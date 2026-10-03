@@ -143,7 +143,7 @@ function FlipCard({
 
   return (
     <motion.article
-      className="absolute inset-x-0 top-0 aspect-[3/4] cursor-pointer will-change-transform sm:aspect-[1.76/1]"
+      className="absolute inset-x-0 top-0 h-[min(calc(100svh_-_8rem),620px)] sm:h-auto cursor-pointer will-change-transform sm:aspect-[1.76/1]"
       onClick={() => item.href && router.push(item.href)}
       style={{
         y: exitY,
@@ -156,7 +156,7 @@ function FlipCard({
       }}
     >
       <motion.div
-        className="grid h-full overflow-hidden rounded-[clamp(18px,2vw,30px)] shadow-[0_16px_50px_rgba(20,17,10,0.18)] sm:grid-cols-[1.15fr_0.85fr]"
+        className="grid h-full overflow-hidden rounded-[clamp(18px,2vw,30px)] shadow-[0_16px_50px_rgba(20,17,10,0.18)] grid-rows-[auto_minmax(0,1fr)] sm:grid-rows-none sm:grid-cols-[1.15fr_0.85fr]"
         style={{
           backgroundColor: item.background,
           color: item.foreground ?? "white",
@@ -186,7 +186,7 @@ function FlipCard({
           </div>
         </div>
 
-        <div className="relative m-[clamp(10px,1.2vw,18px)] min-h-[180px] overflow-hidden rounded-[clamp(12px,1.4vw,22px)] sm:ml-0">
+        <div className="relative m-[clamp(10px,1.2vw,18px)] min-h-0 sm:min-h-[180px] overflow-hidden rounded-[clamp(12px,1.4vw,22px)] sm:ml-0">
           <img
             src={item.image}
             alt={item.imageAlt}
@@ -235,7 +235,7 @@ export function CaseStudyFlipStack({
         style={{ height: `${(Math.max(safeItems.length, 1) + 1) * 70}vh` }}
       >
         <div className="sticky top-0 flex h-[100svh] flex-col justify-center overflow-hidden px-[clamp(14px,4vw,64px)] py-8">
-          <div className="relative mx-auto aspect-[3/4] w-full max-w-[860px] [perspective:800px] sm:aspect-[1.76/1]">
+          <div className="relative mx-auto h-[min(calc(100svh_-_8rem),620px)] sm:h-auto w-full max-w-[860px] [perspective:800px] sm:aspect-[1.76/1]">
             {[...safeItems].reverse().map((item, reverseIndex) => {
               const index = safeItems.length - reverseIndex - 1;
               return (
