@@ -101,7 +101,7 @@ export function ProjectGrid() {
                 <div className="p-6">
                   <h3 className={`${D} text-2xl font-semibold`}>{p.name}</h3>
                   <p className="mt-2 text-[#f2ead8]/70">{p.description}</p>
-                  <p className={`${D} mt-4 text-sm text-[#e6c97a]`}>{p.location} &middot; {p.area} &middot; {p.year}</p>
+                  <p className={`${D} mt-4 text-sm text-[#e6c97a]`}>{[p.location, p.area, p.year].filter(Boolean).join(" · ")}</p>
                   <span className={`${D} mt-4 inline-block text-sm font-semibold underline underline-offset-4 transition group-hover:text-[#e6c97a]`}>View project &rarr;</span>
                 </div>
               </Link>
