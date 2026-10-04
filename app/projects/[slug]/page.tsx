@@ -23,7 +23,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   return (
     <main>
       <section className="relative h-[75svh] min-h-[460px] overflow-hidden bg-[#0b1330]">
-        <img src={p.image} alt={p.imageAlt} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={p.image} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full scale-125 object-cover opacity-60 blur-2xl" />
+        <img src={p.image} alt={p.imageAlt} className="absolute inset-0 h-full w-full object-contain" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/40" />
         <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-5 pb-14 text-white">
           <Link href="/projects" className={`${D} mb-6 text-sm font-medium text-[#e6c97a] hover:underline`}>&larr; All projects</Link>

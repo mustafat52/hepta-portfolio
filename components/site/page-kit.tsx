@@ -94,8 +94,9 @@ export function ProjectGrid() {
           {list.map((p) => (
             <motion.div layout key={p.slug} initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} transition={{ duration: 0.35 }}>
               <Link href={p.href} className="group block overflow-hidden rounded-2xl bg-[#17234d]">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={p.image} alt={p.imageAlt} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <img src={p.image} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full scale-125 object-cover opacity-60 blur-2xl" />
+                  <img src={p.image} alt={p.imageAlt} className="relative h-full w-full object-contain transition duration-700 group-hover:scale-105" />
                   <span className={`${D} absolute left-4 top-4 rounded-full bg-[#0b1330]/80 px-3 py-1 text-xs font-semibold text-[#e6c97a]`}>{p.eyebrow}</span>
                 </div>
                 <div className="p-6">

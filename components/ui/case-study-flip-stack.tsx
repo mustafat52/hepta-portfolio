@@ -156,7 +156,7 @@ function FlipCard({
       }}
     >
       <motion.div
-        className="grid h-full overflow-hidden rounded-[clamp(18px,2vw,30px)] shadow-[0_16px_50px_rgba(20,17,10,0.18)] grid-rows-[auto_minmax(0,1fr)] sm:grid-rows-none sm:grid-cols-[1.15fr_0.85fr]"
+        className="grid h-full overflow-hidden rounded-[clamp(18px,2vw,30px)] shadow-[0_16px_50px_rgba(20,17,10,0.18)] grid-rows-1 sm:grid-rows-none sm:grid-cols-[1.15fr_0.85fr]"
         style={{
           backgroundColor: item.background,
           color: item.foreground ?? "white",
@@ -165,7 +165,7 @@ function FlipCard({
           transformOrigin: "50% 100%",
         }}
       >
-        <div className="flex min-w-0 flex-col p-[clamp(24px,3vw,48px)] md:pr-[clamp(22px,3vw,48px)]">
+        <div className="relative z-10 flex min-w-0 flex-col self-end p-[clamp(24px,3vw,48px)] sm:self-auto md:pr-[clamp(22px,3vw,48px)]">
           <div className="flex items-start">
             <span className="text-[clamp(24px,2.5vw,36px)] font-medium leading-none tracking-[-0.06em]">
               {item.number ?? String(index + 1).padStart(2, "0")}
@@ -186,15 +186,13 @@ function FlipCard({
           </div>
         </div>
 
-        <div className="relative m-[clamp(10px,1.2vw,18px)] min-h-0 sm:min-h-[180px] overflow-hidden rounded-[clamp(12px,1.4vw,22px)] sm:ml-0">
-          <img
-            src={item.image}
-            alt={item.imageAlt}
-            className="h-full w-full object-cover"
+        <div className="absolute inset-0 z-0 overflow-hidden sm:relative sm:inset-auto sm:z-auto sm:m-[clamp(10px,1.2vw,18px)] sm:ml-0 sm:min-h-[180px] sm:rounded-[clamp(12px,1.4vw,22px)]">
+          <img src={item.image} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full scale-125 object-cover opacity-60 blur-2xl" />
+          <img src={item.image} alt={item.imageAlt} className="relative h-full w-full object-contain"
             loading={index < 2 ? "eager" : "lazy"}
             draggable={false}
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-white/10" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0b1330]/95 via-[#0b1330]/40 to-transparent sm:bg-gradient-to-tr sm:from-black/20 sm:via-transparent sm:to-white/10" />
         </div>
       </motion.div>
     </motion.article>
