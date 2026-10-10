@@ -7,7 +7,7 @@ const D = "font-[family-name:var(--font-display)]";
 // Sample one-line notes under each number. Edit to match Hepta's real facts.
 const NOTES = [
   "Homes, offices, shops and cafes",
-  "Designing and building since 2014",
+  "Designing and building since 2017",
   "Carpenters, electricians and site engineers",
   "Handed over on or before the agreed date",
 ];

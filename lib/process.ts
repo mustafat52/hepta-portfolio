@@ -36,10 +36,10 @@ export const PROCESS = [
     needing: ["Your time for the walkthrough", "Your snag list, room by room"],
   },
   {
-    title: "Handover and aftercare", time: "After handover",
-    summary: "We hand over the keys with the paperwork, and we stay available after you move in.",
-    doing: ["Hand over keys and all documents", "Provide warranties and care guides for every material", "Share as-built drawings for future work", "Fix any defects free for 12 months"],
-    getting: ["Warranty documents", "Care guides", "As-built drawings", "12 months of free fixes"],
+    title: "Handover", time: "At handover",
+    summary: "We hand over the keys together with all the project paperwork.",
+    doing: ["Hand over keys and all documents", "Provide warranties and care guides for every material", "Share as-built drawings for future work"],
+    getting: ["Warranty documents", "Care guides", "As-built drawings"],
     needing: ["The final payment as agreed", "Your feedback, and photos if you are happy to share them"],
   },
 ];

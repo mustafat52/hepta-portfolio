@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { C } from "@/lib/content";
 
-export function Wordmark({ light = false }: { light?: boolean }) {
-  return (
-    <span className={`font-[family-name:var(--font-display)] text-xl font-semibold tracking-[0.35em] ${light ? "text-white" : "text-[#f2ead8]"}`}>
-      HEPT<span className="text-[#d6b25e]">A</span>
-    </span>
-  );
+export function Wordmark({ light }: { light?: boolean }) {
+  void light;
+  return <img src="/logo-header.png" alt="Hepta Constructions & Interiors" className="h-11 w-auto md:h-[52px]" />;
+}
+
+export function FullLogo() {
+  return <img src="/logo-full.png" alt="Hepta Constructions & Interiors" className="h-28 w-auto md:h-32" />;
 }
 
 const links = [["About", "/#about"], ["Services", "/#services"], ["Work", "/#work"], ["Process", "/#process"], ["Reviews", "/#reviews"]];
@@ -29,7 +30,7 @@ export function Footer() {
   return (
     <footer className="bg-[#070c20] px-5 py-10 text-sm text-white/70">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4">
-        <Wordmark light />
+        <FullLogo />
         <div className="space-y-1">
           <p><a href={`tel:+${C.whatsapp}`} className="hover:text-white">{C.phone}</a> &middot; <a href={`mailto:${C.email}`} className="hover:text-white">{C.email}</a></p>
           {C.addresses.map((a) => <p key={a.label}><b className="text-white/90">{a.label}:</b> {a.text}</p>)}

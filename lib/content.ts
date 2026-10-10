@@ -32,9 +32,9 @@ export const C = {
     ["Design and quote", "Working drawings, materials and an itemised quote."],
     ["Build", "Our crew builds, with weekly updates and photos."],
     ["Styling", "Furniture, lighting and a snag-list walkthrough."],
-    ["Handover", "Keys, warranties and 12 months of free fixes."],
+    ["Handover", "Keys, warranties and all documents."],
   ],
-  stats: [["120+", "Projects delivered"], ["12", "Years of practice"], ["45", "In-house craftsmen"], ["98%", "On-time handover"]],
+  stats: [["30+", "Projects delivered"], ["9+", "Years of experience"], ["45", "In-house craftsmen"], ["98%", "On-time handover"]],
   // Real projects, in the same order as public/work/p1.jpg, p2.jpg ...
   // Optional extras for any project: area, year, duration, overview, challenge, approach,
   // scope (list), materials (list), results ([["16 wks", "Start to handover"]]), gallery (list of image paths).

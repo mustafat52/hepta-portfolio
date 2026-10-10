@@ -20,9 +20,9 @@ export default function ProcessPage() {
       </section>
       <section className="mx-auto max-w-6xl px-5 py-20">
         <Reveal><h2 className={`${D} text-4xl font-semibold tracking-tight md:text-5xl`}>What you can expect from us</h2></Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {EXPECT.map(([t, d], i) => (
-            <Reveal key={t} delay={(i % 2) * 0.1}><div className="h-full rounded-2xl border border-[#d6b25e]/20 bg-[#17234d] p-7"><h3 className={`${D} text-2xl font-semibold`}>{t}</h3><p className="mt-3 text-[#f2ead8]/75">{d}</p></div></Reveal>
+            <Reveal key={t} delay={(i % 3) * 0.1}><div className="h-full rounded-2xl border border-[#d6b25e]/20 bg-[#17234d] p-7"><h3 className={`${D} text-2xl font-semibold`}>{t}</h3><p className="mt-3 text-[#f2ead8]/75">{d}</p></div></Reveal>
           ))}
         </div>
       </section>

@@ -25,9 +25,9 @@ export default function About() {
       </section>
       <section className="mx-auto max-w-6xl px-5 py-20">
         <Reveal><h2 className={`${D} text-4xl font-semibold tracking-tight md:text-5xl`}>What we hold ourselves to</h2></Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
           {ABOUT.values.map(([t, d], i) => (
-            <Reveal key={t} delay={(i % 2) * 0.1}>
+            <Reveal key={t} delay={(i % 3) * 0.1}>
               <div className="h-full rounded-2xl border border-[#d6b25e]/20 bg-[#17234d] p-7 transition hover:-translate-y-1 hover:border-[#d6b25e]/60">
                 <span className={`${D} text-sm font-semibold text-[#e6c97a]`}>0{i + 1}</span>
                 <h3 className={`${D} mt-2 text-2xl font-semibold`}>{t}</h3>
@@ -53,14 +53,13 @@ export default function About() {
       </section>
       <section className="mx-auto max-w-6xl px-5 py-20">
         <Reveal><h2 className={`${D} text-4xl font-semibold tracking-tight md:text-5xl`}>The people behind the work</h2></Reveal>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {ABOUT.team.map(([i, n, r, d], k) => (
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          {ABOUT.team.map(([i, n, r], k) => (
             <Reveal key={n + k} delay={k * 0.08}>
               <div className="h-full rounded-2xl bg-[#17234d] p-6">
                 <span className={`${D} grid h-14 w-14 place-items-center rounded-full bg-[#d6b25e] text-lg font-bold text-[#0b1330]`}>{i}</span>
                 <h3 className={`${D} mt-4 text-xl font-semibold`}>{n}</h3>
                 <p className={`${D} text-sm text-[#e6c97a]`}>{r}</p>
-                <p className="mt-3 text-base text-[#f2ead8]/70">{d}</p>
               </div>
             </Reveal>
           ))}
