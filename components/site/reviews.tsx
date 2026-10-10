@@ -57,14 +57,16 @@ export function Reviews() {
           </div>
         )}
       </div>
-      {REVIEWS.length < 6 ? (
-        <div className="mx-auto max-w-6xl px-5"><ReviewCards /></div>
-      ) : (
-        <div className="space-y-5">
-          <Row items={REVIEWS.slice(0, half)} />
-          <Row items={REVIEWS.slice(half)} reverse />
+      <div className="space-y-5">
+          {REVIEWS.length < 6 ? (
+            <Row items={REVIEWS} />
+          ) : (
+            <>
+              <Row items={REVIEWS.slice(0, half)} />
+              <Row items={REVIEWS.slice(half)} reverse />
+            </>
+          )}
         </div>
-      )}
     </section>
   );
 }
